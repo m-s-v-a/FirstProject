@@ -3,8 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px
+        }
+        .form-input{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input[type=submit]{
+            width: 90%;
+            height: 24px;
+            background-color: aquamarine;
+        }
+        input[type=submit]:hover {
+            cursor: pointer;
+            background-color: aqua;
+        }
+        input[type=submit]:active {
+            background-color: darkcyan;
+        }
+    </style>
 </head>
 <body>
-
+<div class="container">
+<h1>Registration form</h1>
+<form>
+    <div class="form-input">
+        <label for="name-input">Enter your name</label>
+        <input type="text" id="name-input" placeholder="Your Name"/>
+    </div>
+    <div class="form-input">
+        <label for="password-input">Enter your password</label>
+        <input type="password" id="password-input" placeholder="Your password"/>
+    </div>
+    <div class="form-input">
+        <label for="user-type-input">Select user type</label>
+        <select id="user-type-input">
+            <option value="Admin">Admin</option>
+            <option value="Moderator">Moderator</option>
+            <option value="User">User</option>
+        </select>
+    </div>
+    <input type="submit" value="Submit form"/>
+</form>
+</div>
 </body>
 </html>
